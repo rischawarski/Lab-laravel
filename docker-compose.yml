@@ -48,25 +48,25 @@ services:
             - laravel-9
 
     # queue
-    queue:
-        container_name: lab-queue
-        image: especializati/laravel9-app
-        restart: unless-stopped
-        command: "php artisan queue:work"
-        volumes: 
-            - ./:/var/www
-        depends_on: 
-            - redis
-            - app
-        networks: 
-            - laravel-9
+    #queue:
+        #container_name: lab-queue
+        #image: especializati/laravel9-app
+        #restart: unless-stopped
+        #command: "php artisan queue:work"
+        #volumes: 
+            #- ./:/var/www
+        #depends_on: 
+            #- redis
+            #- app
+        #networks: 
+            #- laravel-9
 
     # redis
-    redis:
-        container_name: lab-redis
-        image: redis:latest
-        networks: 
-            - laravel-9
+    #redis:
+        #container_name: lab-redis
+        #image: redis:latest
+        #networks: 
+            #- laravel-9
 
 networks: 
     laravel-9:
